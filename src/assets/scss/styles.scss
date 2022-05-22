@@ -1,6 +1,53 @@
-$black: #000;
+// Global Variables
+////////////////////////////////////
+
+
+$primaryFont: 'Hind Siliguri', sans-serif;
+
+$white: #FEFEFE;
+$black: #111;
+$lightGray: #ebeaea;
+
+$brandOne: #A22E41;
+$brandTwo: #2EA28F;
+$brandThree: #77D8C8;
+
+// Base Styles
+////////////////////////////////////
+
+body{
+    height: 100%;
+    background-color: $white;
+    color: $black;
+    font-family: $primaryFont;
+}
+
+.wrap{
+    display: block;
+    margin: 0 auto;
+    width: min(84%, 1160px);}
 
 #content{
-    padding: 20px;
-    background-color: $black;
+}
+
+
+// Header
+////////////////////////////////////
+
+header{
+    padding: 15px 0px;}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 700;
+
+    div{
+        height: 36px;
+        width: 36px;
+        background-color: $brandOne;
+        border-radius: 100%;}
+
 }
