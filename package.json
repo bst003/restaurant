@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch": "npx webpack --watch"
+    "watch": "npx webpack --watch",
+    "start": "webpack serve --open"
   },
   "repository": {
     "type": "git",
@@ -19,8 +20,8 @@
   },
   "homepage": "https://github.com/bst003/restaurant#readme",
   "devDependencies": {
-    "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.72.1",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
   }
 }
