@@ -1,14 +1,57 @@
-import { generalFunctions } from "./general";
-
 export const headerFunctions = (() => {
 
-    // Private variables/functions
+    // Factories
 
-    const _newNavLink = (name, target) => {
+    const _newNavLink = ( name ) => {
 
         const getName  = () => name;
 
+        return {
+            getName
+        }
+
     }
+
+    // Private variables/functions
+
+    const _navLinks = [];
+
+    const _createLogo = () => {
+
+        const logo = document.createElement('logo');
+        logo.setAttribute('class', 'logo');
+
+        const circle = document.createElement('div');
+
+        const logoTitle = document.createElement('span');
+        logoTitle.innerText = 'Brunch Bowl';
+
+        logo.appendChild(circle);
+        logo.appendChild(logoTitle);
+
+        return logo;
+
+    } 
+
+    const _createNav = () => {
+
+        let nav = document.createElement('ul');
+        nav.setAttribute('class', 'nav');
+
+        const homeLink = _newNavLink('home');
+        _navLinks.push(homeLink);
+
+        const menuLink = _newNavLink('menu');
+        _navLinks.push(menuLink);
+
+        const contactLink = _newNavLink('contact');
+        _navLinks.push(contactLink);
+
+
+        return nav;
+
+    }
+
 
     // Public variables/functions
 
@@ -19,9 +62,13 @@ export const headerFunctions = (() => {
         const wrap = document.createElement('div');
         wrap.setAttribute('class', 'wrap');
 
+        wrap.appendChild( _createLogo() );
+
+        wrap.appendChild( _createNav() );
+
         header.appendChild(wrap);
 
-        generalFunctions.content.appendChild(header);
+        return header;
 
     }
 

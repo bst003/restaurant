@@ -3,21 +3,17 @@ import { headerFunctions } from "./header";
 export const pageLoad = (() => {
 
     // Private variables/functions
+    const _content = document.querySelector('#content');
     const _message = 'this is private';
 
     // Public variables/functions
 
     const buildInitialContent = () => {
 
-        headerFunctions.buildHeader();
+        _content.appendChild( headerFunctions.buildHeader() );
 
     }
 
-    const testFunction = () => {
-
-        console.log(`hello world - ${_message}`);
-
-    }
 
     return {
         buildInitialContent
