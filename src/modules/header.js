@@ -56,6 +56,7 @@ export const headerFunctions = (() => {
 
             const navLink = document.createElement('a');
             navLink.setAttribute('href', '#');
+            navLink.setAttribute('data-target', _navLinks[i].getName() );
 
             navLink.innerText = _navLinks[i].getName();
 
