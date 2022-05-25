@@ -31,6 +31,18 @@ export const generalFunctions = (() => {
 
     }
 
+
+    const createModule = (title) => {
+
+        const module = document.createElement('div');
+        module.setAttribute('class', 'module');
+        module.setAttribute('data-module', title);
+
+        return module;
+
+    }
+
+
     const createWrap = () => {
 
         const wrap = document.createElement('div');
@@ -43,6 +55,7 @@ export const generalFunctions = (() => {
 
     return {
         createHero,
+        createModule,
         createWrap
     }
 

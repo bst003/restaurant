@@ -9,9 +9,7 @@ export const homeFunctions = (() => {
 
     const buildTemplate = () => {
 
-        const module = document.createElement('div');
-        module.setAttribute('class', 'module');
-        module.setAttribute('data-module', 'home');
+        const module = generalFunctions.createModule('home');
         
         module.appendChild( generalFunctions.createHero('Brunch Bowl', 'Satisfy your breakfast cravings with delicious brunch bowls', homeHero) );
 
