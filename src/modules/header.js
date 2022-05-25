@@ -50,6 +50,22 @@ export const headerFunctions = (() => {
         _navLinks.push(contactLink);
 
 
+        for (let i = 0; i < _navLinks.length; i++){
+
+            const navItem = document.createElement('li');
+
+            const navLink = document.createElement('a');
+            navLink.setAttribute('href', '#');
+
+            navLink.innerText = _navLinks[i].getName();
+
+            navItem.appendChild(navLink);
+
+            nav.appendChild(navItem);
+
+        }
+
+
         return nav;
 
     }
