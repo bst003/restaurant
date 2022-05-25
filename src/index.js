@@ -16,6 +16,9 @@ Miscellaneous
     tab switching event listeners will need to be added after page load
         will first remove existing .module then add new one
 
+NEW NOTES
+    Potentially refactor all templates into one template file?
+    Should createWrap be with createHero and createModule when two are module specific?
 
 */
 
