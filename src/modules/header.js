@@ -1,3 +1,5 @@
+import { generalFunctions } from "./general";
+
 export const headerFunctions = (() => {
 
     // Factories
@@ -59,8 +61,7 @@ export const headerFunctions = (() => {
 
         const header = document.createElement('header');
 
-        const wrap = document.createElement('div');
-        wrap.setAttribute('class', 'wrap');
+        const wrap = generalFunctions.createWrap();
 
         wrap.appendChild( _createLogo() );
 
