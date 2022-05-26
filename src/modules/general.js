@@ -6,6 +6,18 @@ export const generalFunctions = (() => {
 
     // Public variables/functions
 
+
+    const clearContent = (parent) => {
+
+        while( parent.firstChild ){
+
+            parent.removeChild( parent.firstChild );
+
+        }
+
+    }
+
+
     const createContentSection = ( title, ...description ) => {
 
         const contentSection = document.createElement('div');
@@ -32,7 +44,7 @@ export const generalFunctions = (() => {
         return contentSection;
 
     }
-    
+
 
     const createHero = ( title, description, image) => {
 
@@ -81,6 +93,7 @@ export const generalFunctions = (() => {
 
 
     return {
+        clearContent,
         createContentSection,
         createHero,
         createModule,
