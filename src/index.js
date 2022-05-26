@@ -26,6 +26,7 @@ import { pageLoad } from "./modules/pageLoad";
 import { generalFunctions } from "./modules/general";
 import { homeFunctions } from "./modules/templates/home";
 import { menuFunctions } from "./modules/templates/menu";
+import { contactFunctions } from "./modules/templates/contact";
 
 const switchTabs = (() => {
 
@@ -50,7 +51,7 @@ const switchTabs = (() => {
                 break;
 
             case 'contact':
-                console.log('hello world');
+                pageMainContent.appendChild( contactFunctions.buildTemplate() );
 
         }
 
@@ -79,6 +80,8 @@ const switchTabs = (() => {
 
 })();
 
+
+// Site Initialization
 
 pageLoad.buildInitialContent();
 
