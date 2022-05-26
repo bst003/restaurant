@@ -6,8 +6,34 @@ export const generalFunctions = (() => {
 
     // Public variables/functions
 
-    const createHero = ( title, description, image) => {
+    const createContentSection = ( title, ...description ) => {
 
+        const contentSection = document.createElement('div');
+        contentSection.classList.add('content-section', 'wrap', 'mini');
+
+        const sectionTitle = document.createElement('h2');
+        sectionTitle.setAttribute('class', 'center');
+        sectionTitle.innerText = title;
+
+        contentSection.appendChild(sectionTitle);
+        
+
+        const descriptionArray = description;
+
+        for ( let i = 0; i < descriptionArray.length; i++){
+
+            const sectionDescription = document.createElement('p');
+            sectionDescription.innerText = descriptionArray[i];
+
+            contentSection.appendChild(sectionDescription);
+
+        }
+
+        return contentSection;
+
+    }
+
+    const createHero = ( title, description, image) => {
 
         const hero = document.createElement('div');
         hero.setAttribute('class', 'hero');
@@ -54,6 +80,7 @@ export const generalFunctions = (() => {
 
 
     return {
+        createContentSection,
         createHero,
         createModule,
         createWrap
