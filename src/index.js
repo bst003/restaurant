@@ -23,6 +23,63 @@ NEW NOTES
 */
 
 import { pageLoad } from "./modules/pageLoad";
+import { generalFunctions } from "./modules/general";
+import { homeFunctions } from "./modules/templates/home";
+import { menuFunctions } from "./modules/templates/menu";
+
+const switchTabs = (() => {
+
+    // Private variables/functions
+
+    const _changeTab = (e) => {
+
+        const linkTarget = e.currentTarget.dataset.target;
+
+        const pageMainContent = document.querySelector('.main-content');
+
+        generalFunctions.clearContent(pageMainContent);
+
+        switch(linkTarget) {
+
+            case 'home':
+                pageMainContent.appendChild( homeFunctions.buildTemplate() );
+                break;
+
+            case 'menu':
+                pageMainContent.appendChild( menuFunctions.buildTemplate() );
+                break;
+
+            case 'contact':
+                console.log('hello world');
+
+        }
+
+        
+    }
+
+    // Public variables/functions
+
+    const buildListeners = () => {
+
+        console.log('testing');
+
+        const navLinks = document.querySelectorAll('.nav a');
+
+        navLinks.forEach( (navLink) => {
+
+            navLink.addEventListener('click', _changeTab );
+
+        });
+
+    }
+
+    return {
+        buildListeners
+    }
+
+})();
+
 
 pageLoad.buildInitialContent();
 
+switchTabs.buildListeners();
