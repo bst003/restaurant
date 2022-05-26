@@ -16,7 +16,7 @@ export const generalFunctions = (() => {
         sectionTitle.innerText = title;
 
         contentSection.appendChild(sectionTitle);
-        
+
 
         const descriptionArray = description;
 
@@ -32,6 +32,7 @@ export const generalFunctions = (() => {
         return contentSection;
 
     }
+    
 
     const createHero = ( title, description, image) => {
 
