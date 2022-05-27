@@ -28,7 +28,7 @@ export const generalFunctions = (() => {
         sectionTitle.innerText = title;
 
         contentSection.appendChild(sectionTitle);
-
+        
 
         const descriptionArray = description;
 

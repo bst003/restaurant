@@ -10,8 +10,9 @@ export const footerFunctions = (() => {
     const buildFooter = () => {
 
         const footer = document.createElement('footer');
-
+        
         const wrap = generalFunctions.createWrap();
+
         wrap.innerHTML = '&copy; Brunch Bowl';
 
         footer.appendChild(wrap);
