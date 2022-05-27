@@ -116,10 +116,42 @@ header{
 
 }
 
+.nav-contain{
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mm-trigger{
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    background-color: initial;
+    border: initial;
+
+    &::before{
+        content: "\f0c9";
+        font-family: 'Font Awesome 5 Free';
+        font-size: 24px;
+        font-weight: 900;
+    }
+
+    &.active{
+
+        &::before{
+            color: $brandOne;
+        }
+
+    }
+
+}
+
 .nav{
     padding: 0px;
     margin: 0px;
-    flex: 2;
     display: flex;
     justify-content: flex-end;
     gap: 35px;
@@ -149,6 +181,20 @@ header{
     }
 
 }
+
+
+@media all and (max-width: 768px) {
+
+    .mm-trigger{
+        display: flex;
+    }
+
+    .nav{
+        display: none;
+    }
+
+}
+
 
 
 // Main Content
@@ -224,6 +270,24 @@ header{
     }
 
 }
+
+
+@media all and (max-width: 991px) {
+
+    .menu-items{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media all and (max-width: 599px) {
+
+    .menu-items{
+        grid-template-columns: 1fr;
+    }
+
+}
+
 
 // Footer
 ////////////////////////////////////

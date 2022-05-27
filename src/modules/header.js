@@ -37,7 +37,14 @@ export const headerFunctions = (() => {
 
     const _createNav = () => {
 
-        let nav = document.createElement('ul');
+        const navContain = document.createElement('div');
+        navContain.setAttribute('class', 'nav-contain');
+
+        const mmTrigger = document.createElement('button');
+        mmTrigger.setAttribute('type', 'button');
+        mmTrigger.setAttribute('class', 'mm-trigger');
+
+        const nav = document.createElement('ul');
         nav.setAttribute('class', 'nav');
 
         const homeLink = _newNavLink('home');
@@ -71,8 +78,11 @@ export const headerFunctions = (() => {
 
         }
 
+        navContain.appendChild(mmTrigger);
+        navContain.appendChild(nav);
 
-        return nav;
+
+        return navContain;
 
     }
 
