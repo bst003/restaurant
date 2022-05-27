@@ -36,9 +36,17 @@ const switchTabs = (() => {
 
         e.preventDefault();
 
+        const link = e.currentTarget;
         const linkTarget = e.currentTarget.dataset.target;
-
+        const navLinks = document.querySelectorAll('.nav a');
         const pageMainContent = document.querySelector('.main-content');
+
+        navLinks.forEach( (navLink) => {
+            navLink.classList.remove('active');
+        });
+
+        link.setAttribute('class', 'active');
+
 
         generalFunctions.clearContent(pageMainContent);
 

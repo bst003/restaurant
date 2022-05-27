@@ -135,6 +135,10 @@ header{
             text-transform: capitalize;
             transition: all .2s;
 
+            &.active{
+                color: $brandOne;
+            }
+
             &:hover,
             &:active{
                 color: $brandOne;
@@ -198,7 +202,8 @@ header{
 .menu-items{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    row-gap: 40px;
+    column-gap: 50px;
 }
 
 .menu-item{

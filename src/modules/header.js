@@ -55,6 +55,11 @@ export const headerFunctions = (() => {
             const navItem = document.createElement('li');
 
             const navLink = document.createElement('a');
+
+            if( i === 0 ){
+                navLink.setAttribute('class', 'active');
+            }
+
             navLink.setAttribute('href', '#');
             navLink.setAttribute('data-target', _navLinks[i].getName() );
 
