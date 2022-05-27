@@ -89,8 +89,43 @@ const switchTabs = (() => {
 })();
 
 
+const triggerMenu = (() => {
+
+    // Private variables/functions
+
+    const _trigger = (e) => {
+
+        e.preventDefault();
+
+        const nav = document.querySelector('.nav');
+        const trigger = e.currentTarget;
+
+        nav.classList.toggle('active');
+        trigger.classList.toggle('active');
+ 
+    }
+
+    // Public variables/functions
+
+    const buildListeners = () => {
+
+        const mmTrigger = document.querySelector('.mm-trigger');
+
+        mmTrigger.addEventListener('click', _trigger );
+
+    }
+
+    return {
+        buildListeners
+    }
+
+})();
+
+
 // Site Initialization
 
 pageLoad.buildInitialContent();
 
 switchTabs.buildListeners();
+
+triggerMenu.buildListeners();

@@ -90,6 +90,8 @@ p{
 ////////////////////////////////////
 
 header{
+    position: relative;
+    z-index: 2;
     padding: 15px 0px;
 
     .wrap{
@@ -117,6 +119,7 @@ header{
 }
 
 .nav-contain{
+    position: relative;
     flex: 2;
     display: flex;
     justify-content: flex-end;
@@ -191,6 +194,22 @@ header{
 
     .nav{
         display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: $white;
+        padding: 20px;
+        flex-direction: column;
+        gap: 6px;
+
+        &.active{
+            display: flex;
+        }
+
+        li{
+            text-align: right;
+        }
+
     }
 
 }
