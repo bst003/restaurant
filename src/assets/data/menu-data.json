@@ -1,0 +1,32 @@
+[
+    {
+        "name":"Classic Bowl",
+        "description":"A classic brunch bowl with egg, sausage, broccoli and cheese over a potato hash",
+        "price":"10.95"
+    },
+    {
+        "name":"Vegetatian Bowl",
+        "description":"A classic brunch bowl with egg, sausage, broccoli and cheese over a potato hash",
+        "price":"9.95"
+    },
+    {
+        "name":"Meat Lovers Bowl",
+        "description":"A classic brunch bowl with egg, sausage, broccoli and cheese over a potato hash",
+        "price":"11.95"
+    },
+    {
+        "name":"Southwestern Bowl",
+        "description":"A classic brunch bowl with egg, sausage, broccoli and cheese over a potato hash",
+        "price":"11.95"
+    },
+    {
+        "name":"Fruit Bowl",
+        "description":"A classic brunch bowl with egg, sausage, broccoli and cheese over a potato hash",
+        "price":"11.95"
+    },
+    {
+        "name":"Chicken & Waffle Bowl",
+        "description":"A classic brunch bowl with egg, sausage, broccoli and cheese over a potato hash",
+        "price":"11.95"
+    }
+]

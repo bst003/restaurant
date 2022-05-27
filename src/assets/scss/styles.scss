@@ -189,6 +189,29 @@ header{
     padding: 100px 0px;
 }
 
+
+.menu-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+}
+
+.menu-item{
+
+    header{
+        margin: 0px 0px 8px;
+    }
+
+    p{
+        margin: 0px;
+        &.title{
+            font-weight: 600;
+        }
+    }
+
+}
+
 // Footer
 ////////////////////////////////////
 

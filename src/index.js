@@ -34,6 +34,8 @@ const switchTabs = (() => {
 
     const _changeTab = (e) => {
 
+        e.preventDefault();
+
         const linkTarget = e.currentTarget.dataset.target;
 
         const pageMainContent = document.querySelector('.main-content');
@@ -61,8 +63,6 @@ const switchTabs = (() => {
     // Public variables/functions
 
     const buildListeners = () => {
-
-        console.log('testing');
 
         const navLinks = document.querySelectorAll('.nav a');
 

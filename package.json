@@ -21,6 +21,7 @@
   "homepage": "https://github.com/bst003/restaurant#readme",
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "json5": "^2.2.1",
     "sass": "^1.52.1",
     "sass-loader": "^13.0.0",
     "style-loader": "^3.3.1",
