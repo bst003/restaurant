@@ -19,7 +19,7 @@ export const contactFunctions = (() => {
         contentContain.appendChild( 
             generalFunctions.createContentSection(
                 "We'd love to hear from you", 
-                "Here are Brunch Bowl we're always excited to hear from our customers. Use any of the below contact methonds to reach us!"            
+                "Here are Brunch Bowl we're always excited to hear from our customers. You can reach us at info@brunchbowl.com or just call us at (232) 222-4444.",
             )
         );
 
