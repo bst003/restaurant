@@ -9,7 +9,7 @@ export const menuFunctions = (() => {
     const _buildMenu = ( array ) => {
 
         const menu = document.createElement('div');
-        menu.setAttribute('class', 'menu-items');
+        menu.classList.add( 'menu-items', 'wrap' );
 
         for( let i = 0; i < array.length; i++ ){
 
@@ -54,15 +54,19 @@ export const menuFunctions = (() => {
         
         module.appendChild( generalFunctions.createHero('Menu', 'Our choices will always leave you satisfied', menuHero) );
 
-        module.appendChild( 
+        const contentContain = document.createElement('div');
+        contentContain.setAttribute('class', 'content-contain');
+
+        contentContain.appendChild( 
             generalFunctions.createContentSection(
                 'Our Options', 
                 "Brunch Bowl offers a variety of culinary options, please let us know if there are any special allergens before making your order."            
             )
         );
 
-        module.appendChild( _buildMenu(menuData) );
+        contentContain.appendChild( _buildMenu(menuData) );
 
+        module.appendChild(contentContain);
 
         return module;
 

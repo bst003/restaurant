@@ -185,21 +185,29 @@ header{
 }
 
 
-.content-section{
+.content-contain{
     padding: 100px 0px;
+
+    >div:not(:last-of-type){
+        margin-bottom: 50px;
+    }
+
 }
 
 
 .menu-items{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 30px;
-    row-gap: 40px;
+    gap: 40px;
 }
 
 .menu-item{
 
-    header{
+    .header{
+        display: flex;
+        justify-content: space-between;
+        column-gap: 12px;
+        row-gap: 4px;
         margin: 0px 0px 8px;
     }
 
