@@ -188,6 +188,14 @@ header{
 
 @media all and (max-width: 768px) {
 
+    .logo{
+        flex: 2;
+    }
+
+    .nav-contain{
+        flex: 1;
+    }
+
     .mm-trigger{
         display: flex;
     }
